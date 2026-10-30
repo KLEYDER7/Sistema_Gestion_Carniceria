@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Gestión de Carnicería</title>
+    <link rel="icon" type="image/svg+xml" href="img/carniceria/logo.svg" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/sistema.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="img/carniceria/logo.svg" alt="Logo de la carnicería" />
+        <span>
+          <span class="brand-name">Sistema de Gestión de Carnicería</span>
+          <span class="brand-sub">Administración y control del negocio</span>
+        </span>
+      </a>
+      <span id="fecha" class="fecha" data-largo></span>
+    </header>
+
+    <!-- Menú principal del sitio: se mantienen las seis opciones solicitadas -->
+    <nav class="site-nav">
+      <a class="active" href="index.html">INICIO</a>
+      <a href="marcoTeorico.html">GENERALIDADES Y MARCO TEÓRICO</a>
+      <a href="analisisEstructurado.html">ANÁLISIS Y DISEÑO ESTRUCTURADO</a>
+      <a href="analisisOO.html">ANÁLISIS Y DISEÑO ORIENTADO A OBJETOS </a>
+      <a href="videos.html">VIDEOS</a>
+      <a href="contactos.html">CONTACTOS</a>
+    </nav>
+
+    <!-- PORTADA DE BIENVENIDA -->
+    <section class="portada">
+      <div class="portada-texto">
+        <span class="portada-etiqueta">GESTIÓN INTEGRAL DEL NEGOCIO</span>
+        <h1>Sistema de Gestión de <span>Carnicería</span></h1>
+        <p>
+          Controla tus productos, el inventario, las ventas, los clientes y los proveedores desde un solo
+          lugar, con reportes claros para decidir mejor cada día.
+        </p>
+        <div class="portada-botones">
+          <a class="btn-portada" href="#sistema">Ingresar al sistema</a>
+          <a class="btn-portada secundario" href="marcoTeorico.html">Ver documentación</a>
+        </div>
+        <div class="portada-modulos">
+          <span>Productos</span>
+          <span>Inventario</span>
+          <span>Ventas</span>
+          <span>Clientes</span>
+          <span>Proveedores</span>
+          <span>Reportes</span>
+        </div>
+      </div>
+      <div class="portada-imagen">
+        <img src="img/carniceria/hero.svg" alt="Tabla de carnicero con corte de carne y cuchillo" />
+      </div>
+    </section>
+
+    <!-- CATEGORÍAS DE PRODUCTOS -->
+    <section class="categorias">
+      <div class="titulo-seccion">
+        <h2>Nuestras categorías</h2>
+        <p>Los productos que se administran en el sistema.</p>
+      </div>
+      <div class="categorias-grid">
+        <article class="categoria">
+          <img loading="lazy" src="img/carniceria/res.svg" alt="Carne de res" />
+          <div>
+            <h3>Res</h3>
+            <p>Cortes seleccionados de carne de res.</p>
+          </div>
+        </article>
+        <article class="categoria">
+          <img loading="lazy" src="img/carniceria/pollo.svg" alt="Pollo" />
+          <div>
+            <h3>Pollo</h3>
+            <p>Pollo fresco, entero y en presas.</p>
+          </div>
+        </article>
+        <article class="categoria">
+          <img loading="lazy" src="img/carniceria/cerdo.svg" alt="Cerdo" />
+          <div>
+            <h3>Cerdo</h3>
+            <p>Costillas, chuletas y cortes de cerdo.</p>
+          </div>
+        </article>
+        <article class="categoria">
+          <img loading="lazy" src="img/carniceria/embutidos.svg" alt="Embutidos" />
+          <div>
+            <h3>Embutidos</h3>
+            <p>Chorizos, salchichas y más.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SISTEMA DE GESTIÓN -->
+    <div class="sistema" id="sistema">
+      <div class="layout">
+        <aside class="sidebar">
+          <h3>Administración</h3>
+          <button class="side-btn active" data-section="dashboard">▦ Panel principal</button>
+          <button class="side-btn" data-section="productos">▣ Productos</button>
+          <button class="side-btn" data-section="inventario">▤ Inventario</button>
+          <button class="side-btn" data-section="ventas">🛒 Ventas</button>
+          <button class="side-btn" data-section="clientes">♙ Clientes</button>
+          <button class="side-btn" data-section="proveedores">♧ Proveedores</button>
+          <button class="side-btn" data-section="reportes">▥ Reportes</button>
+        </aside>
+
+        <main>
+          <section id="dashboard" class="section active">
+            <div class="page-title">
+              <div>
+                <h2>Panel principal</h2>
+                <p>Resumen general de la carnicería.</p>
+              </div>
+              <button class="btn" onclick="mostrarSeccion('ventas')">＋ Registrar venta</button>
+            </div>
+            <div class="cards">
+              <div class="card metric">
+                <div>
+                  <div class="label">Productos registrados</div>
+                  <div class="number" id="totalProductos">0</div>
+                </div>
+                <span class="symbol">🥩</span>
+              </div>
+              <div class="card metric">
+                <div>
+                  <div class="label">Unidades en inventario</div>
+                  <div class="number" id="totalInventario">0</div>
+                </div>
+                <span class="symbol">📦</span>
+              </div>
+              <div class="card metric">
+                <div>
+                  <div class="label">Ventas realizadas</div>
+                  <div class="number" id="totalVentas">0</div>
+                </div>
+                <span class="symbol">🧾</span>
+              </div>
+              <div class="card metric">
+                <div>
+                  <div class="label">Clientes registrados</div>
+                  <div class="number" id="totalClientes">0</div>
+                </div>
+                <span class="symbol">👥</span>
+              </div>
+            </div>
+            <div class="grid-two">
+              <div class="panel">
+                <h3>Alertas de inventario</h3>
+                <div id="alertasInventario" class="muted">No hay alertas.</div>
+              </div>
+              <div class="panel">
+                <h3>Últimas ventas</h3>
+                <div class="table-wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Fecha</th>
+                        <th>Cliente</th>
+                        <th>Total</th>
+                      </tr>
+                    </thead>
+                    <tbody id="ultimasVentas"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="productos" class="section">
+            <div class="page-title">
+              <div>
+                <h2>Productos</h2>
+                <p>Registra y administra los productos que ofrece la carnicería.</p>
+              </div>
+            </div>
+            <div class="grid-two">
+              <div class="panel">
+                <h3>Registrar producto</h3>
+                <form id="formProducto">
+                  <input type="hidden" id="productoId" />
+                  <div class="form-grid">
+                    <div class="field full">
+                      <label for="nombreProducto">Nombre del producto *</label
+                      ><input id="nombreProducto" required placeholder="Ej. Carne de res" />
+                    </div>
+                    <div class="field">
+                      <label for="categoriaProducto">Categoría *</label
+                      ><select id="categoriaProducto" required>
+                        <option value="">Seleccionar</option>
+                        <option>Res</option>
+                        <option>Pollo</option>
+                        <option>Cerdo</option>
+                        <option>Embutidos</option>
+                        <option>Otros</option>
+                      </select>
+                    </div>
+                    <div class="field">
+                      <label for="precioProducto">Precio por unidad (Bs) *</label
+                      ><input id="precioProducto" type="number" min="0.01" step="0.01" required />
+                    </div>
+                    <div class="field">
+                      <label for="stockProducto">Stock inicial *</label
+                      ><input id="stockProducto" type="number" min="0" step="0.01" required />
+                    </div>
+                    <div class="field">
+                      <label for="unidadProducto">Unidad</label
+                      ><select id="unidadProducto">
+                        <option value="kg">Kilogramo (kg)</option>
+                        <option value="unidad">Unidad</option>
+                        <option value="paquete">Paquete</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="actions">
+                    <button class="btn" type="submit" id="guardarProducto">Guardar producto</button
+                    ><button class="btn secondary" type="button" onclick="limpiarProducto()">Limpiar</button>
+                  </div>
+                </form>
+              </div>
+              <div class="panel">
+                <h3>Listado de productos</h3>
+                <input
+                  class="search"
+                  id="buscarProducto"
+                  placeholder="Buscar producto..."
+                  oninput="renderProductos()"
+                />
+                <div class="table-wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Producto</th>
+                        <th>Categoría</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tablaProductos"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="inventario" class="section">
+            <div class="page-title">
+              <div>
+                <h2>Inventario</h2>
+                <p>Consulta las existencias y actualiza las cantidades disponibles.</p>
+              </div>
+            </div>
+            <div class="panel">
+              <input
+                class="search"
+                id="buscarInventario"
+                placeholder="Buscar producto..."
+                oninput="renderInventario()"
+              />
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Producto</th>
+                      <th>Categoría</th>
+                      <th>Stock actual</th>
+                      <th>Unidad</th>
+                      <th>Actualizar stock</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tablaInventario"></tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <section id="ventas" class="section">
+            <div class="page-title">
+              <div>
+                <h2>Ventas</h2>
+                <p>Registra una venta. El sistema descontará automáticamente el stock.</p>
+              </div>
+            </div>
+            <div class="notice">
+              Antes de confirmar, verifica los productos, cantidades y el total de la venta.
+            </div>
+            <div class="grid-two">
+              <div class="panel">
+                <h3>Nueva venta</h3>
+                <div class="field">
+                  <label for="clienteVenta">Cliente</label
+                  ><select id="clienteVenta">
+                    <option value="">Cliente ocasional</option>
+                  </select>
+                </div>
+                <div class="field" style="margin-top: 12px">
+                  <label for="productoVenta">Producto</label
+                  ><select id="productoVenta">
+                    <option value="">Seleccionar producto</option>
+                  </select>
+                </div>
+                <div class="field" style="margin-top: 12px">
+                  <label for="cantidadVenta">Cantidad</label
+                  ><input id="cantidadVenta" type="number" min="0.01" step="0.01" value="1" />
+                </div>
+                <div class="actions">
+                  <button class="btn" type="button" id="agregarVenta">Agregar a la venta</button>
+                </div>
+              </div>
+              <div class="panel">
+                <h3>Detalle de venta</h3>
+                <div class="table-wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Producto</th>
+                        <th>Cant.</th>
+                        <th>Subtotal</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody id="detalleVenta"></tbody>
+                  </table>
+                </div>
+                <div class="total-line">Total: Bs <span id="totalPagar">0.00</span></div>
+                <div class="actions">
+                  <button class="btn" id="confirmarVenta" type="button">Confirmar venta</button
+                  ><button class="btn secondary" type="button" onclick="vaciarCarrito()">Cancelar</button>
+                </div>
+              </div>
+            </div>
+            <div class="panel" style="margin-top: 18px">
+              <h3>Historial de ventas</h3>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>N.º</th>
+                      <th>Fecha</th>
+                      <th>Cliente</th>
+                      <th>Detalle</th>
+                      <th>Total</th>
+                    </tr>
+                  </thead>
+                  <tbody id="historialVentas"></tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <section id="clientes" class="section">
+            <div class="page-title">
+              <div>
+                <h2>Clientes</h2>
+                <p>Registra los datos de los clientes de la carnicería.</p>
+              </div>
+            </div>
+            <div class="grid-two">
+              <div class="panel">
+                <h3>Registrar cliente</h3>
+                <form id="formCliente">
+                  <input type="hidden" id="clienteId" />
+                  <div class="field">
+                    <label for="nombreCliente">Nombre completo *</label><input id="nombreCliente" required />
+                  </div>
+                  <div class="field" style="margin-top: 12px">
+                    <label for="telefonoCliente">Teléfono</label><input id="telefonoCliente" type="tel" />
+                  </div>
+                  <div class="field" style="margin-top: 12px">
+                    <label for="correoCliente">Correo electrónico</label
+                    ><input id="correoCliente" type="email" />
+                  </div>
+                  <div class="actions">
+                    <button class="btn" type="submit">Guardar cliente</button
+                    ><button class="btn secondary" type="button" onclick="limpiarCliente()">Limpiar</button>
+                  </div>
+                </form>
+              </div>
+              <div class="panel">
+                <h3>Listado de clientes</h3>
+                <input
+                  class="search"
+                  id="buscarCliente"
+                  placeholder="Buscar cliente..."
+                  oninput="renderClientes()"
+                />
+                <div class="table-wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Nombre</th>
+                        <th>Teléfono</th>
+                        <th>Correo</th>
+                        <th>Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tablaClientes"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="proveedores" class="section">
+            <div class="page-title">
+              <div>
+                <h2>Proveedores</h2>
+                <p>Administra los datos de los proveedores.</p>
+              </div>
+            </div>
+            <div class="grid-two">
+              <div class="panel">
+                <h3>Registrar proveedor</h3>
+                <form id="formProveedor">
+                  <input type="hidden" id="proveedorId" />
+                  <div class="field">
+                    <label for="nombreProveedor">Nombre del proveedor *</label
+                    ><input id="nombreProveedor" required />
+                  </div>
+                  <div class="field" style="margin-top: 12px">
+                    <label for="contactoProveedor">Persona de contacto</label><input id="contactoProveedor" />
+                  </div>
+                  <div class="field" style="margin-top: 12px">
+                    <label for="telefonoProveedor">Teléfono</label><input id="telefonoProveedor" type="tel" />
+                  </div>
+                  <div class="field" style="margin-top: 12px">
+                    <label for="productoProveedor">Producto que suministra</label
+                    ><input id="productoProveedor" />
+                  </div>
+                  <div class="actions">
+                    <button class="btn" type="submit">Guardar proveedor</button
+                    ><button class="btn secondary" type="button" onclick="limpiarProveedor()">Limpiar</button>
+                  </div>
+                </form>
+              </div>
+              <div class="panel">
+                <h3>Listado de proveedores</h3>
+                <input
+                  class="search"
+                  id="buscarProveedor"
+                  placeholder="Buscar proveedor..."
+                  oninput="renderProveedores()"
+                />
+                <div class="table-wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Proveedor</th>
+                        <th>Contacto</th>
+                        <th>Teléfono</th>
+                        <th>Suministro</th>
+                        <th>Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tablaProveedores"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="reportes" class="section">
+            <div class="page-title">
+              <div>
+                <h2>Reportes</h2>
+                <p>Consulta un resumen de las operaciones registradas.</p>
+              </div>
+              <button class="btn secondary" onclick="window.print()">Imprimir reporte</button>
+            </div>
+            <div class="cards">
+              <div class="card">
+                <div class="label muted">Ingresos totales</div>
+                <div class="number" id="ingresosTotales">Bs 0.00</div>
+              </div>
+              <div class="card">
+                <div class="label muted">Cantidad de ventas</div>
+                <div class="number" id="cantidadVentas">0</div>
+              </div>
+              <div class="card">
+                <div class="label muted">Productos registrados</div>
+                <div class="number" id="productosRegistrados">0</div>
+              </div>
+              <div class="card">
+                <div class="label muted">Productos con stock bajo</div>
+                <div class="number" id="alertasStock">0</div>
+              </div>
+            </div>
+            <div class="panel">
+              <h3>Resumen de ventas</h3>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Fecha</th>
+                      <th>Cliente</th>
+                      <th>Productos</th>
+                      <th>Total</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tablaReportes"></tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+    <footer class="site-footer">
+      <strong>Sistema de Gestión de Carnicería</strong> · Proyecto académico · Los datos se guardan en este
+      navegador.
+    </footer>
+
+    <script src="js/comun.js"></script>
+    <script src="js/sistema.js"></script>
+  </body>
+</html>

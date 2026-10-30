@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-label="Cerdo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4b1d2c"/><stop offset="1" stop-color="#b0506c"/></linearGradient>
+    <linearGradient id="m" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6b3b3"/><stop offset="1" stop-color="#d1717a"/></linearGradient>
+    <linearGradient id="f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fffaf2"/><stop offset="1" stop-color="#f1dcc4"/></linearGradient>
+    <filter id="s"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-opacity=".4"/></filter>
+  </defs>
+  <rect width="400" height="260" fill="url(#bg)"/>
+  <circle cx="330" cy="40" r="90" fill="#fff" opacity=".06"/><circle cx="40" cy="240" r="110" fill="#fff" opacity=".06"/>
+  <!-- costillas -->
+  <g filter="url(#s)" transform="translate(58 44) rotate(4 150 90)">
+    <path d="M10 40 Q150 10 290 40 L286 150 Q150 184 14 150Z" fill="url(#f)"/>
+    <path d="M24 52 Q150 26 276 52 L272 138 Q150 168 28 138Z" fill="url(#m)"/>
+    <g stroke="#fff4e6" stroke-width="12" stroke-linecap="round" opacity=".95">
+      <path d="M62 44 V150"/><path d="M112 40 V156"/><path d="M162 40 V158"/><path d="M212 40 V156"/><path d="M262 44 V150"/>
+    </g>
+    <g stroke="#e8c9ae" stroke-width="3" stroke-linecap="round" opacity=".8">
+      <path d="M62 52 V144"/><path d="M112 48 V150"/><path d="M162 48 V152"/><path d="M212 48 V150"/><path d="M262 52 V144"/>
+    </g>
+  </g>
+</svg>

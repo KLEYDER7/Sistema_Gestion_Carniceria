@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Tabla de carnicero con corte de carne, cuchillo y hierbas">
+  <defs>
+    <linearGradient id="wood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a8703a"/><stop offset="0.5" stop-color="#8a5629"/><stop offset="1" stop-color="#6b3f1c"/>
+    </linearGradient>
+    <linearGradient id="meat" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d63b3b"/><stop offset="0.55" stop-color="#a81f27"/><stop offset="1" stop-color="#7a1018"/>
+    </linearGradient>
+    <linearGradient id="fat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff4e6"/><stop offset="1" stop-color="#ecd3b6"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f6f8"/><stop offset="0.5" stop-color="#c3c9d0"/><stop offset="1" stop-color="#8b939c"/>
+    </linearGradient>
+    <linearGradient id="sausage" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c8573b"/><stop offset="1" stop-color="#7d2a1b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".5" cy=".5" r=".6">
+      <stop offset="0" stop-color="#e0b25a" stop-opacity=".35"/><stop offset="1" stop-color="#e0b25a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="10" stdDeviation="9" flood-color="#000" flood-opacity=".45"/></filter>
+  </defs>
+
+  <ellipse cx="330" cy="260" rx="300" ry="220" fill="url(#glow)"/>
+
+  <!-- riel y ganchos colgantes -->
+  <rect x="40" y="26" width="560" height="10" rx="5" fill="#2a2a2e"/>
+  <rect x="40" y="26" width="560" height="3" rx="2" fill="#555a62"/>
+  <g stroke="#9aa1a9" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M110 36 V70 q0 12 -12 12"/>
+    <path d="M200 36 V66 q0 12 -12 12"/>
+    <path d="M520 36 V70 q0 12 12 12"/>
+  </g>
+  <!-- embutidos colgando -->
+  <g filter="url(#sh)">
+    <path d="M98 82 q-22 40 -2 96 q8 22 24 4 q12 -52 -22 -100z" fill="url(#sausage)"/>
+    <path d="M104 96 q-10 30 -4 60" stroke="#e9a08a" stroke-width="4" fill="none" stroke-linecap="round" opacity=".55"/>
+    <path d="M188 78 q-20 40 0 92 q10 20 24 2 q10 -50 -24 -94z" fill="url(#sausage)"/>
+    <path d="M194 92 q-9 28 -3 56" stroke="#e9a08a" stroke-width="4" fill="none" stroke-linecap="round" opacity=".55"/>
+    <!-- jamón -->
+    <path d="M520 82 q-52 18 -46 72 q6 56 62 54 q52 -4 52 -54 q-2 -52 -68 -72z" fill="#c2514a"/>
+    <path d="M520 96 q-38 16 -34 58 q6 40 48 40" stroke="#e8928a" stroke-width="6" fill="none" stroke-linecap="round" opacity=".5"/>
+    <circle cx="560" cy="188" r="12" fill="#f3e3d3"/>
+  </g>
+
+  <!-- tabla de madera -->
+  <g filter="url(#sh)">
+    <rect x="60" y="250" width="520" height="190" rx="26" fill="url(#wood)"/>
+    <rect x="60" y="250" width="520" height="190" rx="26" fill="none" stroke="#4a2a10" stroke-width="3" opacity=".5"/>
+    <g stroke="#5a3416" stroke-width="2" opacity=".35" fill="none" stroke-linecap="round">
+      <path d="M90 290 H400"/><path d="M180 330 H540"/><path d="M96 372 H320"/><path d="M360 400 H548"/>
+    </g>
+    <circle cx="560" cy="345" r="7" fill="#3d2410" opacity=".6"/>
+  </g>
+
+  <!-- corte tipo T-bone -->
+  <g filter="url(#sh)" transform="translate(96 206) rotate(-6 200 120) scale(.9)">
+    <path d="M30 120 Q10 40 110 20 Q220 -6 330 28 Q410 60 380 150 Q350 240 230 238 Q60 240 30 120Z" fill="url(#fat)"/>
+    <path d="M52 120 Q36 56 120 38 Q220 16 316 46 Q382 74 358 146 Q330 218 228 216 Q74 218 52 120Z" fill="url(#meat)"/>
+    <!-- hueso T -->
+    <path d="M196 40 V214" stroke="#f6ead6" stroke-width="14" stroke-linecap="round"/>
+    <path d="M196 120 H330" stroke="#f6ead6" stroke-width="12" stroke-linecap="round" opacity=".0"/>
+    <path d="M196 120 H110" stroke="#f6ead6" stroke-width="0"/>
+    <!-- veteado -->
+    <g stroke="#f3c9bd" stroke-width="3.5" fill="none" stroke-linecap="round" opacity=".7">
+      <path d="M78 96 Q120 84 160 100"/><path d="M84 150 Q130 136 170 156"/><path d="M232 78 Q290 66 332 92"/>
+      <path d="M236 130 Q290 120 340 142"/><path d="M240 184 Q282 176 320 186"/><path d="M100 188 Q132 180 166 192"/>
+    </g>
+    <!-- marcas de parrilla -->
+    <g stroke="#4a0b10" stroke-width="7" stroke-linecap="round" opacity=".5">
+      <path d="M96 70 L150 190"/><path d="M130 60 L184 180"/>
+      <path d="M244 62 L298 182"/><path d="M280 54 L334 174"/>
+    </g>
+    <path d="M70 70 Q150 30 270 36" stroke="#ff9d8a" stroke-width="5" fill="none" stroke-linecap="round" opacity=".35"/>
+  </g>
+
+  <!-- ramas de romero -->
+  <g stroke="#3f7d4a" stroke-width="4" stroke-linecap="round" fill="none">
+    <path d="M470 300 Q520 270 566 262"/>
+  </g>
+  <g fill="#4f9a5c">
+    <ellipse cx="486" cy="296" rx="14" ry="4" transform="rotate(-24 486 296)"/>
+    <ellipse cx="506" cy="288" rx="14" ry="4" transform="rotate(-20 506 288)"/>
+    <ellipse cx="526" cy="278" rx="14" ry="4" transform="rotate(-14 526 278)"/>
+    <ellipse cx="546" cy="270" rx="14" ry="4" transform="rotate(-8 546 270)"/>
+    <ellipse cx="494" cy="282" rx="14" ry="4" transform="rotate(-50 494 282)"/>
+    <ellipse cx="516" cy="270" rx="14" ry="4" transform="rotate(-44 516 270)"/>
+    <ellipse cx="538" cy="260" rx="14" ry="4" transform="rotate(-36 538 260)"/>
+  </g>
+
+  <!-- cuchillo de carnicero -->
+  <g filter="url(#sh)" transform="translate(400 380) rotate(-6) scale(.68)">
+    <path d="M0 0 L190 0 Q214 0 214 22 L214 66 Q214 82 196 82 L16 82 Q0 82 0 66Z" fill="url(#steel)"/>
+    <path d="M10 10 H196" stroke="#fff" stroke-width="3" opacity=".7" stroke-linecap="round"/>
+    <circle cx="182" cy="26" r="7" fill="#3b4048"/>
+    <rect x="-86" y="18" width="92" height="30" rx="12" fill="#3a2418"/>
+    <rect x="-86" y="18" width="92" height="9" rx="5" fill="#6b4630" opacity=".7"/>
+    <circle cx="-62" cy="33" r="3" fill="#c9a24d"/><circle cx="-34" cy="33" r="3" fill="#c9a24d"/><circle cx="-8" cy="33" r="3" fill="#c9a24d"/>
+  </g>
+</svg>

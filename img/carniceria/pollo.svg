@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-label="Pollo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4a2a0f"/><stop offset="1" stop-color="#b9772a"/></linearGradient>
+    <linearGradient id="m" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f2b565"/><stop offset="1" stop-color="#b9611f"/></linearGradient>
+    <linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff6e3"/><stop offset="1" stop-color="#dcc8a2"/></linearGradient>
+    <filter id="s"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-opacity=".4"/></filter>
+  </defs>
+  <rect width="400" height="260" fill="url(#bg)"/>
+  <circle cx="330" cy="40" r="90" fill="#fff" opacity=".06"/><circle cx="40" cy="240" r="110" fill="#fff" opacity=".06"/>
+  <g filter="url(#s)" transform="translate(60 36) rotate(-22 140 110)">
+    <!-- hueso -->
+    <rect x="200" y="96" width="120" height="28" rx="14" fill="url(#b)"/>
+    <circle cx="326" cy="98" r="18" fill="url(#b)"/><circle cx="326" cy="124" r="18" fill="url(#b)"/>
+    <!-- carne -->
+    <path d="M20 112 Q14 30 110 22 Q214 14 214 112 Q214 200 110 204 Q26 204 20 112Z" fill="url(#m)"/>
+    <path d="M44 78 Q80 44 140 48" stroke="#ffe2b8" stroke-width="8" fill="none" stroke-linecap="round" opacity=".6"/>
+    <g fill="#8b3f10" opacity=".35">
+      <circle cx="70" cy="130" r="6"/><circle cx="110" cy="160" r="5"/><circle cx="150" cy="120" r="7"/><circle cx="92" cy="96" r="4"/><circle cx="160" cy="166" r="4"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-label="Carne de res">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b1212"/><stop offset="1" stop-color="#8c2323"/></linearGradient>
+    <linearGradient id="m" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e04545"/><stop offset="1" stop-color="#8a1620"/></linearGradient>
+    <linearGradient id="f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff4e6"/><stop offset="1" stop-color="#e9cfb0"/></linearGradient>
+    <filter id="s"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-opacity=".4"/></filter>
+  </defs>
+  <rect width="400" height="260" fill="url(#bg)"/>
+  <circle cx="330" cy="40" r="90" fill="#fff" opacity=".05"/><circle cx="40" cy="240" r="110" fill="#fff" opacity=".05"/>
+  <g filter="url(#s)" transform="translate(48 40) rotate(-5 150 90)">
+    <path d="M10 90 Q0 20 80 8 Q170 -8 250 16 Q310 40 290 106 Q268 170 170 168 Q30 172 10 90Z" fill="url(#f)"/>
+    <path d="M28 90 Q20 34 90 24 Q170 10 238 32 Q286 52 270 102 Q250 152 168 150 Q42 154 28 90Z" fill="url(#m)"/>
+    <g stroke="#f6cfc3" stroke-width="3" fill="none" stroke-linecap="round" opacity=".7">
+      <path d="M60 70 Q100 58 140 74"/><path d="M70 112 Q110 100 150 118"/><path d="M170 60 Q220 50 252 72"/><path d="M176 108 Q222 98 258 116"/>
+    </g>
+    <g stroke="#4a0b10" stroke-width="6" stroke-linecap="round" opacity=".45">
+      <path d="M72 46 L110 132"/><path d="M104 40 L142 126"/><path d="M178 40 L216 126"/><path d="M210 36 L248 122"/>
+    </g>
+  </g>
+</svg>

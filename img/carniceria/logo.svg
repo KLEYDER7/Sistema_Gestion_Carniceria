@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c0392b"/><stop offset="1" stop-color="#6e1414"/>
+    </linearGradient>
+    <linearGradient id="m" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f5e9d2"/><stop offset="1" stop-color="#c9a24d"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="url(#g)" stroke="#c9a24d" stroke-width="2.5"/>
+  <!-- cuchillo de carnicero -->
+  <path d="M16 38 L16 24 Q16 20 20 20 L40 20 Q46 20 46 26 L46 30 L20 42 Q16 43 16 38 Z" fill="url(#m)"/>
+  <circle cx="22" cy="27" r="2.2" fill="#6e1414"/>
+  <rect x="44" y="24" width="10" height="7" rx="3" fill="#3a2418" transform="rotate(12 49 27)"/>
+  <path d="M18 46 Q32 54 46 46" stroke="#f5e9d2" stroke-width="2" fill="none" stroke-linecap="round" opacity=".8"/>
+</svg>

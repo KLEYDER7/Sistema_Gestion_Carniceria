@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Análisis y Diseño Estructurado | Sistema de Gestión de Carnicería</title>
+    <link rel="icon" type="image/svg+xml" href="img/carniceria/logo.svg" />
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="img/carniceria/logo.svg" alt="Logo de la carnicería" />
+        <span>
+          <span class="brand-name">Sistema de Gestión de una Carnicería</span>
+          <span class="brand-sub">Documentación y diseño del proyecto</span>
+        </span>
+      </a>
+      <span id="fecha" class="fecha"></span>
+    </header>
+    <nav class="site-nav">
+      <a href="index.html">INICIO</a>
+      <a href="marcoTeorico.html">GENERALIDADES Y MARCO TEÓRICO</a>
+      <a class="active" href="analisisEstructurado.html">ANÁLISIS Y DISEÑO ESTRUCTURADO</a>
+      <a href="analisisOO.html">ANÁLISIS Y DISEÑO ORIENTADO A OBJETOS </a>
+      <a href="videos.html">VIDEOS</a>
+      <a href="contactos.html">CONTACTOS</a>
+    </nav>
+    <section class="hero">
+      <span class="tag">DOCUMENTACIÓN DEL PROYECTO</span>
+      <h1>Análisis y Diseño Estructurado</h1>
+      <p>Modelado y documentación del Sistema de Gestión de una Carnicería.</p>
+    </section>
+    <div class="wrapper">
+      <aside class="contents">
+        <h3>CONTENIDO DE LA SECCIÓN</h3>
+        <nav>
+          <a href="#intro">1. Introducción</a><a href="#descripcion">2. Descripción del sistema</a
+          ><a href="#contexto">3. Diagrama de contexto</a
+          ><a href="#dfd0">4. Diagrama de flujo de datos (DFD) nivel 0</a
+          ><a href="#dfd1">5. Diagrama de flujo de datos (DFD) nivel 1</a
+          ><a href="#diccionario">6. Diccionario de datos</a><a href="#er">7. Diagrama entidad-relación</a
+          ><a href="#procesos">8. Especificación de procesos</a>
+        </nav>
+      </aside>
+      <main>
+        <section class="article-section" id="intro">
+          <h2>1. Introducción al análisis estructurado</h2>
+          <p>
+            El análisis estructurado estudia un sistema mediante los procesos que realiza, los datos que
+            utiliza y el intercambio de información con entidades externas. En este proyecto se utilizan
+            diagramas de contexto, diagramas de flujo de datos (DFD), diccionario de datos y modelo
+            entidad-relación.
+          </p>
+        </section>
+        <section class="article-section" id="descripcion">
+          <h2>2. Descripción del sistema</h2>
+          <p>
+            El sistema web permite administrar productos, inventario, ventas, clientes y proveedores, además
+            de consultar reportes básicos.
+          </p>
+          <h3>Entradas</h3>
+          <ul>
+            <li>Datos de productos: nombre, categoría, precio, unidad y stock.</li>
+            <li>Datos de clientes y proveedores.</li>
+            <li>Productos y cantidades de cada venta.</li>
+            <li>Actualizaciones de existencias.</li>
+          </ul>
+          <h3>Procesos</h3>
+          <ul>
+            <li>Administración de productos y categorías.</li>
+            <li>Control de inventario.</li>
+            <li>Registro y cálculo de ventas.</li>
+            <li>Gestión de clientes y proveedores.</li>
+            <li>Generación de reportes.</li>
+          </ul>
+          <h3>Salidas</h3>
+          <ul>
+            <li>Listado de productos y existencias.</li>
+            <li>Resumen e historial de ventas.</li>
+            <li>Ingresos registrados y alertas de stock bajo.</li>
+          </ul>
+        </section>
+        <section class="article-section" id="contexto">
+          <h2>3. Diagrama de contexto</h2>
+          <p>
+            Representa el sistema como un único proceso y muestra su comunicación con el cliente, vendedor,
+            proveedor y administrador.
+          </p>
+          <figure class="image-frame">
+            <img loading="lazy" src="img/diagrama_contexto.png" alt="3. Diagrama de contexto" />
+            <figcaption>Figura: 3. Diagrama de contexto del Sistema de Gestión de una Carnicería.</figcaption>
+          </figure>
+        </section>
+        <section class="article-section" id="dfd0">
+          <h2>4. Diagrama de flujo de datos (DFD) nivel 0</h2>
+          <p>
+            Descompone el sistema en sus procesos principales y muestra las entidades externas, almacenes y
+            flujos generales de información.
+          </p>
+          <figure class="image-frame">
+            <img
+              loading="lazy"
+              src="img/dfd_nivel0_150.png"
+              alt="4. Diagrama de flujo de datos (DFD) nivel 0"
+            />
+            <figcaption>
+              Figura: 4. Diagrama de flujo de datos (DFD) nivel 0 del Sistema de Gestión de una Carnicería.
+            </figcaption>
+          </figure>
+        </section>
+        <section class="article-section" id="dfd1">
+          <h2>5. Diagrama de flujo de datos (DFD) nivel 1</h2>
+          <p>
+            Amplía el detalle de los procesos internos y muestra cómo se intercambian los datos entre las
+            actividades del sistema.
+          </p>
+          <figure class="image-frame">
+            <img loading="lazy" src="img/dfd_nivel1.png" alt="5. Diagrama de flujo de datos (DFD) nivel 1" />
+            <figcaption>
+              Figura: 5. Diagrama de flujo de datos (DFD) nivel 1 del Sistema de Gestión de una Carnicería.
+            </figcaption>
+          </figure>
+        </section>
+        <section class="article-section" id="diccionario">
+          <h2>6. Diccionario de datos</h2>
+          <p>
+            Documenta los elementos de información, sus nombres, tipos y descripciones para mantener
+            uniformidad en el diseño y la programación.
+          </p>
+          <figure class="image-frame">
+            <img loading="lazy" src="img/diccionario_datos.png" alt="6. Diccionario de datos" />
+            <figcaption>Figura: 6. Diccionario de datos del Sistema de Gestión de una Carnicería.</figcaption>
+          </figure>
+        </section>
+        <section class="article-section" id="er">
+          <h2>7. Diagrama entidad-relación</h2>
+          <p>
+            Muestra las entidades principales, sus atributos y las relaciones que organizan la información del
+            negocio.
+          </p>
+          <figure class="image-frame">
+            <img loading="lazy" src="img/diagrama_er.png" alt="7. Diagrama entidad-relación" />
+            <figcaption>
+              Figura: 7. Diagrama entidad-relación del Sistema de Gestión de una Carnicería.
+            </figcaption>
+          </figure>
+        </section>
+        <section class="article-section" id="procesos">
+          <h2>8. Especificación de procesos</h2>
+          <h3>Registrar producto</h3>
+          <ol>
+            <li>El administrador ingresa al módulo de productos.</li>
+            <li>Introduce nombre, categoría, precio, unidad y stock inicial.</li>
+            <li>El sistema valida los datos obligatorios.</li>
+            <li>El producto queda registrado y aparece en el listado.</li>
+          </ol>
+          <h3>Registrar venta</h3>
+          <ol>
+            <li>El vendedor selecciona al cliente o indica una venta ocasional.</li>
+            <li>Selecciona productos y cantidades.</li>
+            <li>El sistema verifica que exista stock suficiente.</li>
+            <li>Calcula los subtotales y el total.</li>
+            <li>Al confirmar, registra la venta y descuenta las cantidades del inventario.</li>
+          </ol>
+          <h3>Actualizar inventario</h3>
+          <ol>
+            <li>El administrador busca el producto y consulta su stock.</li>
+            <li>Introduce la cantidad actualizada.</li>
+            <li>El sistema valida y guarda el cambio.</li>
+          </ol>
+        </section>
+      </main>
+    </div>
+    <footer class="site-footer">
+      <strong>Sistema de Gestión de una Carnicería</strong>
+    </footer>
+    <script src="js/comun.js"></script>
+  </body>
+</html>

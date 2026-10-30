@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Análisis y Diseño Orientado a Objetos | Sistema de Gestión de Carnicería</title>
+    <link rel="icon" type="image/svg+xml" href="img/carniceria/logo.svg" />
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="img/carniceria/logo.svg" alt="Logo de la carnicería" />
+        <span>
+          <span class="brand-name">Sistema de Gestión de una Carnicería</span>
+          <span class="brand-sub">Documentación y diseño del proyecto</span>
+        </span>
+      </a>
+      <span id="fecha" class="fecha"></span>
+    </header>
+    <nav class="site-nav">
+      <a href="index.html">INICIO</a>
+      <a href="marcoTeorico.html">GENERALIDADES Y MARCO TEÓRICO</a>
+      <a href="analisisEstructurado.html">ANÁLISIS Y DISEÑO ESTRUCTURADO</a>
+      <a class="active" href="analisisOO.html">ANÁLISIS Y DISEÑO ORIENTADO A OBJETOS (OO)</a>
+      <a href="videos.html">VIDEOS</a>
+      <a href="contactos.html">CONTACTOS</a>
+    </nav>
+    <section class="hero">
+      <span class="tag">DOCUMENTACIÓN DEL PROYECTO</span>
+      <h1>Análisis y Diseño Orientado a Objetos</h1>
+      <p>Modelado y documentación del Sistema de Gestión de una Carnicería.</p>
+    </section>
+    <div class="wrapper">
+      <aside class="contents">
+        <h3>CONTENIDO DE LA SECCIÓN</h3>
+        <nav>
+          <a href="#intro">1. Introducción</a><a href="#actores">2. Identificación de actores</a
+          ><a href="#casos">3. Diagrama UML de casos de uso</a><a href="#clases">4. Diagrama UML de clases</a
+          ><a href="#objetos">5. Diagrama UML de objetos</a
+          ><a href="#actividades">6. Diagrama UML de actividades</a
+          ><a href="#secuencia">7. Diagrama UML de secuencia</a
+          ><a href="#estados">8. Diagrama UML de estados</a
+          ><a href="#componentes">9. Diagrama UML de componentes</a
+          ><a href="#despliegue">10. Diagrama UML de despliegue</a>
+        </nav>
+      </aside>
+      <main>
+        <section class="article-section" id="intro">
+          <h2>1. Introducción al análisis orientado a objetos</h2>
+          <p>
+            El paradigma orientado a objetos organiza el sistema mediante objetos que poseen atributos y
+            operaciones y colaboran entre sí. UML (Lenguaje Unificado de Modelado) permite representar
+            visualmente la estructura y el comportamiento de la aplicación.
+          </p>
+        </section>
+        <section class="article-section" id="actores">
+          <h2>2. Identificación de actores</h2>
+          <ul>
+            <li><b>Administrador:</b> gestiona productos, inventario, clientes, proveedores y reportes.</li>
+            <li><b>Vendedor:</b> registra ventas y consulta productos disponibles.</li>
+            <li><b>Cliente:</b> solicita productos y recibe información de su compra.</li>
+            <li><b>Proveedor:</b> suministra productos y proporciona información de abastecimiento.</li>
+          </ul>
+        </section>
+        <section class="article-section" id="casos">
+          <h2>3. Diagrama UML de casos de uso</h2>
+          <p>
+            Muestra las funciones del sistema y la interacción de los actores con ellas, como administrar
+            productos, gestionar inventario, registrar ventas y generar reportes.
+          </p>
+          <figure class="image-frame">
+            <img loading="lazy" src="img/uml_casos_uso.png" alt="3. Diagrama UML de casos de uso" />
+            <figcaption>
+              Figura: 3. Diagrama UML de casos de uso del Sistema de Gestión de una Carnicería.
+            </figcaption>
+          </figure>
+        </section>
+        <section class="article-section" id="clases">
+          <h2>4. Diagrama UML de clases</h2>
+          <p>
+            Describe la estructura estática mediante clases, atributos, operaciones y relaciones entre los
+            elementos del negocio.
+          </p>
+          <figure class="image-frame">
+            <img loading="lazy" src="img/uml_clases.png" alt="4. Diagrama UML de clases" />
+            <figcaption>
+              Figura: 4. Diagrama UML de clases del Sistema de Gestión de una Carnicería.
+            </figcaption>
+          </figure>
+        </section>
+        <section class="article-section" id="objetos">
+          <h2>5. Diagrama UML de objetos</h2>
+          <p>Presenta instancias concretas de las clases y sus vínculos en un momento determinado.</p>
+          <figure class="image-frame">
+            <img loading="lazy" src="img/uml_objetos.png" alt="5. Diagrama UML de objetos" />
+            <figcaption>
+              Figura: 5. Diagrama UML de objetos del Sistema de Gestión de una Carnicería.
+            </figcaption>
+          </figure>
+        </section>
+        <section class="article-section" id="actividades">
+          <h2>6. Diagrama UML de actividades</h2>
+          <p>
+            Representa el flujo de trabajo de un proceso, sus actividades, decisiones y caminos alternativos.
+          </p>
+          <figure class="image-frame">
+            <img loading="lazy" src="img/uml_actividades.png" alt="6. Diagrama UML de actividades" />
+            <figcaption>
+              Figura: 6. Diagrama UML de actividades del Sistema de Gestión de una Carnicería.
+            </figcaption>
+          </figure>
+        </section>
+        <section class="article-section" id="secuencia">
+          <h2>7. Diagrama UML de secuencia</h2>
+          <p>
+            Muestra el intercambio de mensajes entre actores y objetos en el orden en que se ejecutan las
+            operaciones.
+          </p>
+          <figure class="image-frame">
+            <img loading="lazy" src="img/uml_secuencia.png" alt="7. Diagrama UML de secuencia" />
+            <figcaption>
+              Figura: 7. Diagrama UML de secuencia del Sistema de Gestión de una Carnicería.
+            </figcaption>
+          </figure>
+        </section>
+        <section class="article-section" id="estados">
+          <h2>8. Diagrama UML de estados</h2>
+          <p>
+            Representa los estados por los que puede pasar un objeto y los eventos que provocan sus
+            transiciones.
+          </p>
+          <figure class="image-frame">
+            <img loading="lazy" src="img/uml_estados.png" alt="8. Diagrama UML de estados" />
+            <figcaption>
+              Figura: 8. Diagrama UML de estados del Sistema de Gestión de una Carnicería.
+            </figcaption>
+          </figure>
+        </section>
+        <section class="article-section" id="componentes">
+          <h2>9. Diagrama UML de componentes</h2>
+          <p>
+            Muestra la organización del software en módulos y las dependencias entre los componentes
+            funcionales.
+          </p>
+          <figure class="image-frame">
+            <img loading="lazy" src="img/uml_componentes.png" alt="9. Diagrama UML de componentes" />
+            <figcaption>
+              Figura: 9. Diagrama UML de componentes del Sistema de Gestión de una Carnicería.
+            </figcaption>
+          </figure>
+        </section>
+        <section class="article-section" id="despliegue">
+          <h2>10. Diagrama UML de despliegue</h2>
+          <p>Representa la distribución de los elementos de software en los nodos o entornos de ejecución.</p>
+          <figure class="image-frame">
+            <img loading="lazy" src="img/uml_despliegue.png" alt="10. Diagrama UML de despliegue" />
+            <figcaption>
+              Figura: 10. Diagrama UML de despliegue del Sistema de Gestión de una Carnicería.
+            </figcaption>
+          </figure>
+        </section>
+      </main>
+    </div>
+    <footer class="site-footer">
+      <strong>Sistema de Gestión de una Carnicería</strong>
+    </footer>
+    <script src="js/comun.js"></script>
+  </body>
+</html>

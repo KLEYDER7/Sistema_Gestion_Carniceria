@@ -1,0 +1,656 @@
+/* ==========================================================================
+   PÁGINA DE INICIO Y SISTEMA DE GESTIÓN (index.html)
+   Requiere estilos.css (variables, cabecera, navegación y pie de página).
+   Contenido:
+   1. Portada de bienvenida
+   2. Categorías con imágenes
+   3. Estructura del sistema (menú lateral + contenido)
+   4. Tarjetas, paneles y métricas
+   5. Formularios y botones
+   6. Tablas y etiquetas
+   7. Responsive
+   ========================================================================== */
+
+/* 1. PORTADA DE BIENVENIDA
+   -------------------------------------------------------------------------- */
+.portada {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: 30px;
+  padding: 54px 6% 46px;
+  color: var(--blanco);
+  background:
+    url("../img/carniceria/patron.svg"),
+    radial-gradient(circle at 80% 40%, rgba(201, 162, 77, 0.22), transparent 55%),
+    linear-gradient(120deg, var(--carbon) 0%, #3b1511 55%, var(--vino-oscuro) 100%);
+}
+
+.portada-etiqueta {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: var(--dorado);
+  color: var(--carbon);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.portada h1 {
+  margin: 18px 0 14px;
+  font-family: var(--fuente-titulos);
+  font-size: clamp(30px, 4.2vw, 50px);
+  line-height: 1.12;
+}
+
+.portada h1 span {
+  color: var(--dorado);
+}
+
+.portada p {
+  max-width: 540px;
+  margin: 0 0 26px;
+  font-size: 17px;
+  color: #eadfd2;
+}
+
+.portada-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn-portada {
+  display: inline-block;
+  padding: 13px 26px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  background: var(--dorado);
+  color: var(--carbon);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.btn-portada:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.btn-portada.secundario {
+  background: transparent;
+  color: var(--blanco);
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+}
+
+.btn-portada.secundario:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.portada-modulos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.portada-modulos span {
+  padding: 5px 13px;
+  font-size: 12px;
+  border: 1px solid rgba(201, 162, 77, 0.55);
+  border-radius: 999px;
+  color: var(--dorado-claro);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.portada-imagen img {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.45));
+}
+
+/* 2. CATEGORÍAS CON IMÁGENES
+   -------------------------------------------------------------------------- */
+.categorias {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 44px 20px 10px;
+}
+
+.titulo-seccion {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.titulo-seccion h2 {
+  margin: 0 0 6px;
+  font-family: var(--fuente-titulos);
+  font-size: 28px;
+  color: var(--vino-oscuro);
+}
+
+.titulo-seccion p {
+  margin: 0;
+  color: var(--gris);
+}
+
+.titulo-seccion::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  margin: 14px auto 0;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--vino), var(--dorado));
+}
+
+.categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.categoria {
+  overflow: hidden;
+  background: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+
+.categoria:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--sombra-fuerte);
+}
+
+.categoria img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 400 / 260;
+  object-fit: cover;
+}
+
+.categoria div {
+  padding: 16px 18px 20px;
+}
+
+.categoria h3 {
+  margin: 0 0 4px;
+  font-family: var(--fuente-titulos);
+  font-size: 19px;
+  color: var(--vino-oscuro);
+}
+
+.categoria p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--gris);
+}
+
+/* 3. ESTRUCTURA DEL SISTEMA
+   -------------------------------------------------------------------------- */
+.sistema {
+  max-width: 1240px;
+  margin: 40px auto 0;
+  padding: 0 20px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  min-height: 620px;
+  overflow: hidden;
+  background: var(--papel);
+  border: 1px solid var(--borde);
+  border-radius: 16px;
+  box-shadow: var(--sombra-fuerte);
+}
+
+.sidebar {
+  padding: 22px 14px;
+  color: var(--blanco);
+  background: url("../img/carniceria/patron.svg"), linear-gradient(180deg, var(--carbon-2), var(--carbon));
+}
+
+.sidebar h3 {
+  margin: 0 10px 16px;
+  font-size: 11px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--dorado);
+}
+
+.side-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin: 3px 0;
+  padding: 12px 14px;
+  border: 0;
+  border-left: 3px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: #e8dfd6;
+  font-family: inherit;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.side-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.side-btn.active {
+  background: var(--vino);
+  border-left-color: var(--dorado);
+  color: var(--blanco);
+}
+
+.layout main {
+  min-width: 0;
+  padding: 28px;
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+  animation: aparecer 0.3s ease;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.page-title h2 {
+  margin: 0;
+  font-family: var(--fuente-titulos);
+  font-size: 26px;
+  color: var(--vino-oscuro);
+}
+
+.page-title p {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: var(--gris);
+}
+
+/* 4. TARJETAS, PANELES Y MÉTRICAS
+   -------------------------------------------------------------------------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.layout .card,
+.panel {
+  padding: 18px 20px;
+  margin-bottom: 0;
+  background: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.layout .card {
+  border-top: 3px solid var(--vino);
+}
+
+.metric {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.metric .label,
+.card .label {
+  font-size: 13px;
+  color: var(--gris);
+}
+
+.metric .number,
+.card .number {
+  margin-top: 8px;
+  font-family: var(--fuente-titulos);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--carbon);
+}
+
+.metric .symbol {
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 12px;
+  background: var(--vino-claro);
+}
+
+.grid-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.panel h3 {
+  margin: 0 0 16px;
+  padding-bottom: 10px;
+  font-family: var(--fuente-titulos);
+  font-size: 17px;
+  color: var(--vino-oscuro);
+  border-bottom: 2px solid var(--dorado-claro);
+}
+
+.muted {
+  font-size: 13px;
+  color: var(--gris);
+}
+
+.notice {
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  font-size: 13px;
+  color: #6b4f14;
+  background: #fff7e3;
+  border: 1px solid var(--dorado-claro);
+  border-left: 4px solid var(--dorado);
+  border-radius: 8px;
+}
+
+.total-line {
+  margin-top: 14px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: right;
+  color: var(--vino-oscuro);
+}
+
+.empty {
+  padding: 22px;
+  text-align: center;
+  color: var(--gris);
+}
+
+/* 5. FORMULARIOS Y BOTONES
+   -------------------------------------------------------------------------- */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field.full {
+  grid-column: 1 / -1;
+}
+
+.field label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--carbon-2);
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--texto);
+  background: var(--blanco);
+  border: 1px solid #d8cec2;
+  border-radius: 8px;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--vino);
+  box-shadow: 0 0 0 3px rgba(140, 29, 29, 0.15);
+}
+
+.search {
+  max-width: 270px;
+  margin-bottom: 12px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--vino);
+  color: var(--blanco);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.15s;
+}
+
+.btn:hover {
+  background: var(--vino-oscuro);
+  transform: translateY(-1px);
+}
+
+.btn.secondary {
+  background: #ebe3d8;
+  color: var(--carbon-2);
+}
+
+.btn.secondary:hover {
+  background: #ddd2c3;
+}
+
+.btn.danger {
+  background: #b42318;
+}
+
+.btn.danger:hover {
+  background: #8f1c13;
+}
+
+.btn.small {
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+/* 6. TABLAS Y ETIQUETAS
+   -------------------------------------------------------------------------- */
+.layout .table-wrap {
+  border: 0;
+  border-radius: 0;
+}
+
+.layout table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.layout th,
+.layout td {
+  padding: 11px 10px;
+  text-align: left;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--borde);
+}
+
+.layout th {
+  background: var(--crema);
+  color: var(--carbon-2);
+  font-size: 12px;
+  letter-spacing: 0.4px;
+}
+
+.layout tbody tr:nth-child(even) {
+  background: transparent;
+}
+
+.layout tbody tr:hover {
+  background: var(--crema);
+}
+
+.pill {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--verde);
+  background: #e6f3eb;
+  border-radius: 999px;
+}
+
+.pill.warn {
+  color: #946200;
+  background: #fff1cf;
+}
+
+.pill.bad {
+  color: #b42318;
+  background: #fde8e7;
+}
+
+/* 7. RESPONSIVE
+   -------------------------------------------------------------------------- */
+@media (max-width: 1000px) {
+  .categorias-grid,
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .portada {
+    grid-template-columns: 1fr;
+    padding: 40px 6% 36px;
+    text-align: center;
+  }
+
+  .portada p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .portada-botones,
+  .portada-modulos {
+    justify-content: center;
+  }
+
+  .portada-imagen {
+    order: -1;
+  }
+
+  .portada-imagen img {
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 760px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+    padding: 12px;
+  }
+
+  .sidebar h3 {
+    width: 100%;
+    margin: 4px 8px;
+  }
+
+  .side-btn {
+    width: auto;
+    padding: 9px 12px;
+  }
+
+  .grid-two {
+    grid-template-columns: 1fr;
+  }
+
+  .layout main {
+    padding: 16px;
+  }
+
+  .sistema {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .categorias-grid,
+  .cards,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .field.full {
+    grid-column: auto;
+  }
+}
+
+@media print {
+  .portada,
+  .categorias,
+  .sidebar {
+    display: none;
+  }
+
+  .layout {
+    display: block;
+    border: 0;
+    box-shadow: none;
+  }
+}

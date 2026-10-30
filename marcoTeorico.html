@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generalidades y Marco Teórico | Sistema de Gestión de Carnicería</title>
+    <link rel="icon" type="image/svg+xml" href="img/carniceria/logo.svg" />
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="img/carniceria/logo.svg" alt="Logo de la carnicería" />
+        <span>
+          <span class="brand-name">Sistema de Gestión de una Carnicería</span>
+          <span class="brand-sub">Documentación del proyecto de investigación</span>
+        </span>
+      </a>
+      <span id="fecha" class="fecha"></span>
+    </header>
+
+    <nav class="site-nav">
+      <a href="index.html">INICIO</a>
+      <a class="active" href="marcoTeorico.html">GENERALIDADES Y MARCO TEÓRICO</a>
+      <a href="analisisEstructurado.html">ANÁLISIS Y DISEÑO ESTRUCTURADO</a>
+      <a href="analisisOO.html">ANÁLISIS Y DISEÑO ORIENTADO A OBJETOS </a>
+      <a href="videos.html">VIDEOS</a>
+      <a href="contactos.html">CONTACTOS</a>
+    </nav>
+
+    <section class="hero">
+      <span class="tag">DOCUMENTACIÓN DEL PROYECTO</span>
+      <h1>Generalidades y Marco Teórico</h1>
+      <p>
+        En esta sección se presentan los fundamentos, el problema identificado, los objetivos de investigación
+        y la planificación para desarrollar el Sistema de Gestión de una Carnicería.
+      </p>
+    </section>
+
+    <div class="wrapper">
+      <aside class="contents">
+        <h3>CONTENIDO DE LA SECCIÓN</h3>
+        <nav>
+          <a href="#introduccion">1. Introducción</a>
+          <a href="#antecedentes">2. Antecedentes</a>
+          <a href="#problema">3. Planteamiento del problema</a>
+          <a href="#arbol">4. Árbol de problemas</a>
+          <a href="#formulacion">5. Formulación del problema</a>
+          <a href="#proposito">6. Propósito del estudio</a>
+          <a href="#metodo">7. Método, medios e instrumentos</a>
+          <a href="#planificacion">8. Planificación de actividades</a>
+        </nav>
+      </aside>
+
+      <main>
+        <section class="article-section" id="introduccion">
+          <h2>1. Introducción</h2>
+          <p>
+            Las carnicerías son establecimientos comerciales dedicados a la compra, almacenamiento y venta de
+            productos cárnicos. Para desarrollar sus actividades necesitan controlar adecuadamente los
+            productos, las cantidades disponibles, los precios, las ventas, los clientes y los proveedores.
+          </p>
+          <p>
+            Cuando estas operaciones se realizan mediante anotaciones manuales o registros dispersos, pueden
+            presentarse errores en los cálculos, pérdida de información, dificultades para conocer las
+            existencias y demoras al momento de atender a los clientes.
+          </p>
+          <p>
+            Por esta razón, el presente proyecto propone el desarrollo de un
+            <strong>Sistema de Gestión de una Carnicería</strong>, una aplicación web elaborada con HTML, CSS
+            y JavaScript. El sistema permitirá administrar productos, inventario, ventas, clientes y
+            proveedores, además de consultar reportes básicos para apoyar el control del negocio.
+          </p>
+          <p>
+            El proyecto se desarrollará aplicando el paradigma orientado a objetos, el análisis estructurado y
+            el modelado UML, siguiendo un proceso iterativo e incremental mediante la metodología RUP.
+          </p>
+        </section>
+
+        <section class="article-section" id="antecedentes">
+          <h2>2. Antecedentes</h2>
+          <p>
+            En los pequeños y medianos negocios dedicados a la venta de carne, es habitual que el registro de
+            productos, compras, ventas y existencias se realice en cuadernos, hojas de cálculo o mediante
+            apuntes separados. Este procedimiento puede ser suficiente cuando el volumen de operaciones es
+            reducido, pero se vuelve difícil de mantener cuando aumentan los productos y las transacciones.
+          </p>
+          <p>
+            La falta de un registro centralizado puede ocasionar diferencias entre las cantidades reales y las
+            anotadas, desconocimiento de los productos con bajo stock, errores al calcular los importes y
+            dificultad para consultar el historial de ventas.
+          </p>
+          <p>
+            Ante esta situación, se plantea una solución informática sencilla que reúna la información
+            principal del negocio en una sola aplicación y facilite las tareas cotidianas de administración.
+          </p>
+          <h3>Antecedente tecnológico</h3>
+          <p>
+            Las aplicaciones web permiten acceder a funciones de gestión desde un navegador. Para este
+            proyecto se utilizarán tecnologías básicas del desarrollo web: HTML para la estructura, CSS para
+            la presentación y JavaScript para la lógica y las operaciones del sistema. La información se
+            conservará en el navegador mediante almacenamiento local (<em>localStorage</em>), por lo que esta
+            versión será una demostración funcional sin conexión a un servidor ni a una base de datos externa.
+          </p>
+        </section>
+
+        <section class="article-section" id="problema">
+          <h2>3. Planteamiento del problema</h2>
+          <p>
+            La administración de una carnicería requiere mantener información actualizada sobre los productos
+            disponibles, sus precios y cantidades, así como registrar correctamente cada venta y los datos de
+            clientes y proveedores. Sin una herramienta integrada, estas tareas pueden depender de registros
+            manuales que no siempre se actualizan de manera inmediata.
+          </p>
+          <p>
+            Esta situación puede provocar errores en el registro de ventas, falta de control sobre el
+            inventario, pérdida o duplicación de datos y dificultades para obtener información confiable sobre
+            el funcionamiento del negocio. Como consecuencia, la atención al cliente y la toma de decisiones
+            pueden verse afectadas.
+          </p>
+          <p>
+            Por ello, se identifica la necesidad de implementar un sistema que organice los datos y apoye los
+            procesos administrativos principales de una carnicería, permitiendo registrar las operaciones y
+            consultar información de forma rápida y ordenada.
+          </p>
+          <div class="info">
+            <strong>Problema identificado:</strong> deficiente gestión y control de las operaciones de una
+            carnicería debido al uso de registros manuales y a la falta de información centralizada.
+          </div>
+        </section>
+
+        <section class="article-section" id="arbol">
+          <h2>4. Árbol de problemas</h2>
+          <p>
+            El árbol de problemas permite representar gráficamente el problema central, sus principales causas
+            y los efectos que puede producir. En este proyecto, las causas se relacionan con el registro
+            manual, el control insuficiente del inventario y la desorganización de la información.
+          </p>
+          <figure class="image-frame">
+            <img
+              loading="lazy"
+              src="img/arbol_de_problemas.png"
+              alt="Árbol de problemas del Sistema de Gestión de una Carnicería"
+            />
+            <figcaption>Figura 1. Árbol de problemas del Sistema de Gestión de una Carnicería.</figcaption>
+          </figure>
+          <h3>Interpretación del árbol</h3>
+          <p>
+            <strong>Problema central:</strong> deficiente gestión y control de las operaciones de una
+            carnicería.
+          </p>
+          <p><strong>Causas principales:</strong></p>
+          <ul>
+            <li>Registro manual de productos y ventas.</li>
+            <li>Falta de control y seguimiento del inventario.</li>
+            <li>Errores durante el registro y cálculo de las ventas.</li>
+            <li>Información desorganizada de productos, clientes y proveedores.</li>
+            <li>Escasa automatización de los procesos administrativos.</li>
+          </ul>
+          <p><strong>Efectos principales:</strong></p>
+          <ul>
+            <li>Pérdidas económicas por errores en el control de inventario y ventas.</li>
+            <li>Desabastecimiento de productos importantes.</li>
+            <li>Demoras o dificultades en la atención al cliente.</li>
+            <li>Dificultad para tomar decisiones por falta de reportes confiables.</li>
+          </ul>
+        </section>
+
+        <section class="article-section" id="formulacion">
+          <h2>5. Formulación del problema</h2>
+          <p>
+            ¿De qué manera el desarrollo de un sistema web de gestión permitirá mejorar el registro y control
+            de productos, inventario, ventas, clientes y proveedores en una carnicería?
+          </p>
+        </section>
+
+        <section class="article-section" id="proposito">
+          <h2>6. Propósito del estudio</h2>
+          <h3>Objetivo general</h3>
+          <p>
+            Desarrollar un sistema web de gestión para una carnicería que permita organizar y controlar los
+            productos, el inventario, las ventas, los clientes y los proveedores, facilitando el acceso a la
+            información y la generación de reportes básicos.
+          </p>
+          <h3>Objetivos específicos</h3>
+          <ul>
+            <li>Identificar los procesos y necesidades principales de administración de una carnicería.</li>
+            <li>Analizar los requerimientos funcionales y no funcionales del sistema.</li>
+            <li>
+              Diseñar los procesos y flujos de información mediante herramientas de análisis estructurado.
+            </li>
+            <li>Representar la estructura y el comportamiento del sistema mediante diagramas UML.</li>
+            <li>
+              Implementar los módulos de productos, inventario, ventas, clientes y proveedores utilizando
+              HTML, CSS y JavaScript.
+            </li>
+            <li>
+              Realizar pruebas de funcionamiento para comprobar el registro de datos, los cálculos de ventas y
+              la actualización del inventario.
+            </li>
+          </ul>
+        </section>
+
+        <section class="article-section" id="metodo">
+          <h2>7. Método, medios e instrumentos de investigación</h2>
+          <h3>7.1 Método de investigación</h3>
+          <p>
+            Se utilizará un enfoque descriptivo y aplicado. Será descriptivo porque se identificarán y
+            documentarán las actividades que se realizan en una carnicería; y aplicado porque los resultados
+            del análisis se utilizarán para construir una solución informática que atienda las necesidades
+            identificadas.
+          </p>
+          <h3>7.2 Medios e instrumentos</h3>
+          <ul>
+            <li>
+              <strong>Observación:</strong> revisión de las actividades habituales de registro de productos,
+              control de existencias y atención de ventas.
+            </li>
+            <li>
+              <strong>Entrevista:</strong> conversación con una persona que conozca el funcionamiento de una
+              carnicería para identificar necesidades y dificultades.
+            </li>
+            <li>
+              <strong>Revisión documental:</strong> análisis de registros, listas de precios, notas de venta y
+              otros documentos que ayuden a comprender los procesos.
+            </li>
+            <li>
+              <strong>Modelado:</strong> elaboración de diagramas de flujo de datos, diccionario de datos y
+              diagramas UML para representar el sistema.
+            </li>
+            <li>
+              <strong>Pruebas funcionales:</strong> ejecución de casos de prueba para verificar que cada
+              módulo responda correctamente.
+            </li>
+          </ul>
+          <h3>7.3 Justificación</h3>
+          <p>
+            El sistema se justifica porque permitirá reunir la información del negocio en una aplicación,
+            reducir la dependencia de registros manuales y facilitar la consulta de productos, existencias y
+            ventas. También ayudará a identificar productos con stock bajo y a obtener un resumen de los
+            ingresos registrados.
+          </p>
+          <h3>7.4 Alcances y limitaciones</h3>
+          <p>
+            La versión académica incluirá el registro, consulta, edición y eliminación de productos, clientes
+            y proveedores; la consulta y actualización de inventario; el registro de ventas con cálculo
+            automático del total y descuento de existencias; y reportes básicos.
+          </p>
+          <p>
+            El sistema se ejecutará en un navegador y almacenará los datos en <em>localStorage</em>. Por
+            tanto, esta versión no contempla usuarios con distintos permisos, sincronización entre varios
+            equipos, facturación fiscal, pagos electrónicos, conexión con lectores de códigos de barras ni una
+            base de datos centralizada. Los datos permanecerán en el navegador y dispositivo donde se utilice
+            la aplicación.
+          </p>
+          <h3>7.5 Metodología de desarrollo: RUP</h3>
+          <p>
+            Para organizar el desarrollo se utilizará RUP (Rational Unified Process), una metodología
+            iterativa e incremental que divide el trabajo en cuatro fases. Cada iteración permite analizar,
+            diseñar, construir y comprobar una parte del sistema, incorporando mejoras progresivamente.
+          </p>
+          <ul>
+            <li>
+              <span class="phase">Inicio</span> Definir el problema, los objetivos, el alcance y la viabilidad
+              del proyecto.
+            </li>
+            <li>
+              <span class="phase">Elaboración</span> Analizar los requerimientos y preparar los modelos
+              estructurados y UML.
+            </li>
+            <li>
+              <span class="phase">Construcción</span> Programar los módulos y realizar pruebas de
+              funcionamiento.
+            </li>
+            <li>
+              <span class="phase">Transición</span> Revisar el sistema completo, corregir errores y preparar
+              su presentación y entrega.
+            </li>
+          </ul>
+        </section>
+
+        <section class="article-section" id="planificacion">
+          <h2>8. Planificación de actividades</h2>
+          <p>
+            La planificación organiza las tareas necesarias para desarrollar el proyecto de forma ordenada. Se
+            propone un cronograma académico de ocho semanas, distribuido de acuerdo con las cuatro fases de
+            RUP. Las semanas son referenciales y pueden ajustarse al calendario establecido por la materia.
+          </p>
+          <figure class="image-frame">
+            <img
+              loading="lazy"
+              src="img/planificacion_gantt.png"
+              alt="Cronograma de planificación de actividades tipo Gantt"
+            />
+            <figcaption>
+              Figura 2. Cronograma de actividades para el desarrollo del Sistema de Gestión de una Carnicería.
+            </figcaption>
+          </figure>
+          <h3>Actividades por fase</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Fase RUP</th>
+                  <th>Semanas</th>
+                  <th>Actividades principales</th>
+                  <th>Resultado esperado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Inicio</td>
+                  <td>1</td>
+                  <td>Identificación del problema, antecedentes, objetivos y alcance.</td>
+                  <td>Descripción y alcance del proyecto.</td>
+                </tr>
+                <tr>
+                  <td>Elaboración</td>
+                  <td>2–3</td>
+                  <td>
+                    Levantamiento de requerimientos, análisis estructurado y elaboración de diagramas UML.
+                  </td>
+                  <td>Requerimientos y modelos del sistema.</td>
+                </tr>
+                <tr>
+                  <td>Construcción</td>
+                  <td>4–7</td>
+                  <td>
+                    Diseño de interfaz, programación de módulos, almacenamiento local e integración de
+                    funcionalidades.
+                  </td>
+                  <td>Aplicación web funcional.</td>
+                </tr>
+                <tr>
+                  <td>Transición</td>
+                  <td>8</td>
+                  <td>Pruebas, corrección de errores, documentación y preparación de la presentación.</td>
+                  <td>Versión final y documentación.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>Prácticas de trabajo</h3>
+          <ul>
+            <li>Desarrollar el sistema por módulos para facilitar su revisión.</li>
+            <li>Probar cada funcionalidad después de implementarla.</li>
+            <li>Revisar y actualizar los diagramas cuando existan cambios en los requerimientos.</li>
+            <li>Guardar copias de respaldo de los archivos del proyecto.</li>
+            <li>Documentar los avances y los resultados de cada fase.</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <footer class="site-footer">
+      <strong>Sistema de Gestión de una Carnicería · Generalidades y Marco Teórico</strong>
+    </footer>
+    <script src="js/comun.js"></script>
+  </body>
+</html>
